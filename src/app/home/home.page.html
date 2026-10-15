@@ -1,20 +1,1190 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+<ion-header class="top-header">
+  <div class="top-bar">
+    <a href="mailto:etiquetasacumuladores@gmail.com">
+      <ion-icon name="mail-outline"></ion-icon>
+      etiquetasacumuladores&#64;gmail.com
+    </a>
+
+    <a href="tel:+525665315536">
+      <ion-icon name="call-outline"></ion-icon>
+      56 65 31 55 36
+    </a>
+  </div>
+
+  <ion-toolbar class="main-toolbar">
+    <div class="nav-container">
+      <a
+        class="logo-area"
+        href="#inicio"
+        aria-label="Ir al inicio"
+        (click)="irASeccion('inicio', $event)"
+      >
+        <img
+          src="assets/img/Logo.png"
+          alt="Logo de Etiquetas para Acumuladores"
+          draggable="false"
+        >
+      </a>
+
+      <nav class="button-group" aria-label="Navegación principal">
+        <ion-button
+          fill="clear"
+          class="nav-button"
+          (click)="irASeccion('inicio')"
+        >
+          Inicio
+        </ion-button>
+
+        <ion-button
+          fill="clear"
+          class="nav-button"
+          (click)="irASeccion('catalogo')"
+        >
+          Catálogo
+        </ion-button>
+
+        <ion-button
+          fill="clear"
+          class="nav-button"
+          (click)="irASeccion('contacto')"
+        >
+          Contacto
+        </ion-button>
+      </nav>
+    </div>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" class="page-content">
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <!-- PORTADA -->
+  <section id="inicio" class="hero-section">
+    <div class="hero-overlay"></div>
+
+    <div class="hero-layout">
+  <div class="hero-content">
+    <span class="eyebrow">DESDE 1971 FABRICANDO ETIQUETAS</span>
+
+      <h1>
+        Etiquetas para
+        <span>Acumuladores</span>
+      </h1>
+
+      <p class="hero-description">
+        Fabricamos etiquetas adhesivas especializadas para
+        baterías automotrices e industriales, diseñadas para
+        responder a condiciones exigentes.
+      </p>
+
+      <div class="hero-features">
+        <span>Humedad</span>
+        <span>Altas temperaturas</span>
+        <span>Ácidos y grasas</span>
+      </div>
+
+      <div class="hero-actions">
+        <ion-button
+          class="primary-button"
+          (click)="irASeccion('catalogo')"
+        >
+          Ver catálogo
+          <ion-icon
+            name="arrow-forward-outline"
+            slot="end"
+          ></ion-icon>
+        </ion-button>
+
+        <ion-button
+          fill="outline"
+          class="secondary-button"
+          (click)="irASeccion('contacto')"
+        >
+          Solicitar presupuesto
+        </ion-button>
+      
+      </div>
+    </div>
+
+    
+<div class="hero-acumuladores">
+  <img
+    src="assets/img/acumulador.png"
+    alt="Acumulador automotriz"
+    class="acumulador-principal"
+    draggable="false"
+  >
+
+  <img
+    src="assets/img/acumulador2.png"
+    alt="Segundo acumulador automotriz"
+    draggable="false"
+  >
+
+  <img
+    src="assets/img/acumulador3.jpg"
+    alt="Tercer acumulador automotriz"
+    draggable="false"
+  >
+
+  <img
+    src="assets/img/acumulador4.jpg"
+    alt="Cuarto acumulador automotriz"
+    draggable="false"
+  >
+</div>
+
   </div>
+
+  <div class="hero-bottom">
+
+      <span>CALIDAD Y EXPERIENCIA</span>
+      <span>Más de 50 años nos respaldan</span>
+    </div>
+  </section>
+
+  <!-- VENTAJAS -->
+  <section class="intro-section">
+    <div class="section-heading">
+      <span class="eyebrow">SOLUCIONES A TU MEDIDA</span>
+
+      <h3>Tu etiqueta, como la necesitas</h3>
+        <h2>TODAS LAS MEDIDAS</h2>
+        <h2>TODOS LOS MODELOS</h2>
+        <h2>TODOS LOS TAMAÑOS</h2>
+        <h2>CUALQUIER CANTIDAD</h2>
+
+      <p>
+        Desarrollamos etiquetas para identificación de marca,
+        características técnicas y advertencias de transporte.
+      </p>
+    </div>
+
+    <div class="features-grid">
+      <article class="feature-card">
+        <ion-icon name="resize-outline"></ion-icon>
+        <h3>Todas las medidas</h3>
+        <p>Formatos adaptados a tus necesidades.</p>
+      </article>
+
+      <article class="feature-card">
+        <ion-icon name="layers-outline"></ion-icon>
+        <h3>Todos los modelos</h3>
+        <p>Opciones para diferentes tipos de acumuladores.</p>
+      </article>
+
+      <article class="feature-card">
+        <ion-icon name="print-outline"></ion-icon>
+        <h3>Pedidos personalizados</h3>
+        <p>Soluciones según tus requerimientos de impresión.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- CATÁLOGO -->
+  <section id="catalogo" class="catalog-section">
+    <div class="catalog-heading">
+      <div>
+        <span class="eyebrow">NUESTROS PRODUCTOS</span>
+        <h2>Catálogo de etiquetas</h2>
+        <p>Desliza para conocer nuestro trabajo.</p>
+      </div>
+
+      <div class="catalog-arrows">
+        <ion-button
+          fill="outline"
+          class="arrow-button"
+          aria-label="Ver etiquetas anteriores"
+          (click)="desplazarCatalogo(-1)"
+        >
+          <ion-icon name="arrow-back-outline"></ion-icon>
+        </ion-button>
+
+        <ion-button
+          fill="outline"
+          class="arrow-button"
+          aria-label="Ver etiquetas siguientes"
+          (click)="desplazarCatalogo(1)"
+        >
+          <ion-icon name="arrow-forward-outline"></ion-icon>
+        </ion-button>
+      </div>
+    </div>
+
+    <div class="catalog-track" #catalogoCinta>
+
+      <article class="product-card">
+        <img
+          class="catalog-image"
+          src="assets/img/001.jpg"
+          alt="Etiqueta"
+          loading="lazy"
+          draggable="false"
+          (click)="abrirImagen('assets/img/001.jpg', 'Etiquetas')"
+        >
+
+        <div class="product-info">
+          <button
+            type="button"
+            class="view-image-button"
+            (click)="abrirImagen('assets/img/001.jpg', 'Etiquetas')"
+          >
+            Ampliar imagen
+          </button>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img
+          class="catalog-image"
+          src="assets/img/002.jpg"
+          alt="Etiqueta"
+          loading="lazy"
+          draggable="false"
+          (click)="abrirImagen('assets/img/002.jpg', 'Etiquetas')"
+        >
+
+        <div class="product-info">
+          <button
+            type="button"
+            class="view-image-button"
+            (click)="abrirImagen('assets/img/002.jpg', 'Etiquetas')"
+          >
+            Ampliar imagen
+          </button>
+        </div>
+      </article>
+      
+      <article class="product-card">
+        <img
+          class="catalog-image"
+          src="assets/img/003.jpg"
+          alt="Etiqueta"
+          loading="lazy"
+          draggable="false"
+          (click)="abrirImagen('assets/img/003.jpg', 'Etiquetas')"
+        >
+
+        <div class="product-info">
+          <button
+            type="button"
+            class="view-image-button"
+            (click)="abrirImagen('assets/img/003.jpg', 'Etiquetas')"
+          >
+            Ampliar imagen
+          </button>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img
+          class="catalog-image"
+          src="assets/img/004.jpg"
+          alt="Etiqueta"
+          loading="lazy"
+          draggable="false"
+          (click)="abrirImagen('assets/img/004.jpg', 'Etiquetas')"
+        >
+
+        <div class="product-info">
+          <button
+            type="button"
+            class="view-image-button"
+            (click)="abrirImagen('assets/img/004.jpg', 'Etiquetas')"
+          >
+            Ampliar imagen
+          </button>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img
+          class="catalog-image"
+          src="assets/img/005.jpg"
+          alt="Etiqueta"
+          loading="lazy"
+          draggable="false"
+          (click)="abrirImagen('assets/img/005.jpg', 'Etiquetas')"
+        >
+
+        <div class="product-info">
+          <button
+            type="button"
+            class="view-image-button"
+            (click)="abrirImagen('assets/img/005.jpg', 'Etiquetas')"
+          >
+            Ampliar imagen
+          </button>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img
+          class="catalog-image"
+          src="assets/img/006.jpg"
+          alt="Etiqueta"
+          loading="lazy"
+          draggable="false"
+          (click)="abrirImagen('assets/img/006.jpg', 'Etiquetas')"
+        >
+
+        <div class="product-info">
+          <button
+            type="button"
+            class="view-image-button"
+            (click)="abrirImagen('assets/img/006.jpg', 'Etiquetas')"
+          >
+            Ampliar imagen
+          </button>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img
+          class="catalog-image"
+          src="assets/img/007.jpg"
+          alt="Etiqueta"
+          loading="lazy"
+          draggable="false"
+          (click)="abrirImagen('assets/img/007.jpg', 'Etiquetas')"
+        >
+
+        <div class="product-info">
+          <button
+            type="button"
+            class="view-image-button"
+            (click)="abrirImagen('assets/img/007.jpg', 'Etiquetas')"
+          >
+            Ampliar imagen
+          </button>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img
+          class="catalog-image"
+          src="assets/img/008.jpg"
+          alt="Etiqueta"
+          loading="lazy"
+          draggable="false"
+          (click)="abrirImagen('assets/img/008.jpg', 'Etiquetas')"
+        >
+
+        <div class="product-info">
+          <button
+            type="button"
+            class="view-image-button"
+            (click)="abrirImagen('assets/img/008.jpg', 'Etiquetas')"
+          >
+            Ampliar imagen
+          </button>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img
+          class="catalog-image"
+          src="assets/img/009.jpg"
+          alt="Etiqueta"
+          loading="lazy"
+          draggable="false"
+          (click)="abrirImagen('assets/img/009.jpg', 'Etiquetas')"
+        >
+
+        <div class="product-info">
+          <button
+            type="button"
+            class="view-image-button"
+            (click)="abrirImagen('assets/img/009.jpg', 'Etiquetas')"
+          >
+            Ampliar imagen
+          </button>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img
+          class="catalog-image"
+          src="assets/img/010.jpg"
+          alt="Etiqueta"
+          loading="lazy"
+          draggable="false"
+          (click)="abrirImagen('assets/img/010.jpg', 'Etiquetas')"
+        >
+
+        <div class="product-info">
+          <button
+            type="button"
+            class="view-image-button"
+            (click)="abrirImagen('assets/img/010.jpg', 'Etiquetas')"
+          >
+            Ampliar imagen
+          </button>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img
+          class="catalog-image"
+          src="assets/img/011.jpg"
+          alt="Etiqueta"
+          loading="lazy"
+          draggable="false"
+          (click)="abrirImagen('assets/img/011.jpg', 'Etiquetas')"
+        >
+
+        <div class="product-info">
+          <button
+            type="button"
+            class="view-image-button"
+            (click)="abrirImagen('assets/img/011.jpg', 'Etiquetas')"
+          >
+            Ampliar imagen
+          </button>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img
+          class="catalog-image"
+          src="assets/img/012.jpg"
+          alt="Etiqueta"
+          loading="lazy"
+          draggable="false"
+          (click)="abrirImagen('assets/img/012.jpg', 'Etiquetas')"
+        >
+
+        <div class="product-info">
+          <button
+            type="button"
+            class="view-image-button"
+            (click)="abrirImagen('assets/img/012.jpg', 'Etiquetas')"
+          >
+            Ampliar imagen
+          </button>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img
+          class="catalog-image"
+          src="assets/img/013.jpg"
+          alt="Etiqueta"
+          loading="lazy"
+          draggable="false"
+          (click)="abrirImagen('assets/img/013.jpg', 'Etiquetas')"
+        >
+
+        <div class="product-info">
+          <button
+            type="button"
+            class="view-image-button"
+            (click)="abrirImagen('assets/img/013.jpg', 'Etiquetas')"
+          >
+            Ampliar imagen
+          </button>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img
+          class="catalog-image"
+          src="assets/img/014.jpg"
+          alt="Etiqueta"
+          loading="lazy"
+          draggable="false"
+          (click)="abrirImagen('assets/img/014.jpg', 'Etiquetas')"
+        >
+
+        <div class="product-info">
+          <button
+            type="button"
+            class="view-image-button"
+            (click)="abrirImagen('assets/img/014.jpg', 'Etiquetas')"
+          >
+            Ampliar imagen
+          </button>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img
+          class="catalog-image"
+          src="assets/img/015.jpg"
+          alt="Etiqueta"
+          loading="lazy"
+          draggable="false"
+          (click)="abrirImagen('assets/img/015.jpg', 'Etiquetas')"
+        >
+
+        <div class="product-info">
+          <button
+            type="button"
+            class="view-image-button"
+            (click)="abrirImagen('assets/img/015.jpg', 'Etiquetas')"
+          >
+            Ampliar imagen
+          </button>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img
+          class="catalog-image"
+          src="assets/img/016.jpg"
+          alt="Etiqueta"
+          loading="lazy"
+          draggable="false"
+          (click)="abrirImagen('assets/img/016.jpg', 'Etiquetas')"
+        >
+
+        <div class="product-info">
+          <button
+            type="button"
+            class="view-image-button"
+            (click)="abrirImagen('assets/img/016.jpg', 'Etiquetas')"
+          >
+            Ampliar imagen
+          </button>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img
+          class="catalog-image"
+          src="assets/img/017.jpg"
+          alt="Etiqueta"
+          loading="lazy"
+          draggable="false"
+          (click)="abrirImagen('assets/img/017.jpg', 'Etiquetas')"
+        >
+
+        <div class="product-info">
+          <button
+            type="button"
+            class="view-image-button"
+            (click)="abrirImagen('assets/img/017.jpg', 'Etiquetas')"
+          >
+            Ampliar imagen
+          </button>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img
+          class="catalog-image"
+          src="assets/img/018.jpg"
+          alt="Etiqueta"
+          loading="lazy"
+          draggable="false"
+          (click)="abrirImagen('assets/img/018.jpg', 'Etiquetas')"
+        >
+
+        <div class="product-info">
+          <button
+            type="button"
+            class="view-image-button"
+            (click)="abrirImagen('assets/img/018.jpg', 'Etiquetas')"
+          >
+            Ampliar imagen
+          </button>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img
+          class="catalog-image"
+          src="assets/img/019.jpg"
+          alt="Etiqueta"
+          loading="lazy"
+          draggable="false"
+          (click)="abrirImagen('assets/img/019.jpg', 'Etiquetas')"
+        >
+
+        <div class="product-info">
+          <button
+            type="button"
+            class="view-image-button"
+            (click)="abrirImagen('assets/img/019.jpg', 'Etiquetas')"
+          >
+            Ampliar imagen
+          </button>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img
+          class="catalog-image"
+          src="assets/img/020.jpg"
+          alt="Etiqueta"
+          loading="lazy"
+          draggable="false"
+          (click)="abrirImagen('assets/img/020.jpg', 'Etiquetas')"
+        >
+
+        <div class="product-info">
+          <button
+            type="button"
+            class="view-image-button"
+            (click)="abrirImagen('assets/img/020.jpg', 'Etiquetas')"
+          >
+            Ampliar imagen
+          </button>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img
+          class="catalog-image"
+          src="assets/img/021.jpg"
+          alt="Etiqueta"
+          loading="lazy"
+          draggable="false"
+          (click)="abrirImagen('assets/img/021.jpg', 'Etiquetas')"
+        >
+
+        <div class="product-info">
+          <button
+            type="button"
+            class="view-image-button"
+            (click)="abrirImagen('assets/img/021.jpg', 'Etiquetas')"
+          >
+            Ampliar imagen
+          </button>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img
+          class="catalog-image"
+          src="assets/img/022.jpg"
+          alt="Etiqueta"
+          loading="lazy"
+          draggable="false"
+          (click)="abrirImagen('assets/img/022.jpg', 'Etiquetas')"
+        >
+
+        <div class="product-info">
+          <button
+            type="button"
+            class="view-image-button"
+            (click)="abrirImagen('assets/img/022.jpg', 'Etiquetas')"
+          >
+            Ampliar imagen
+          </button>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img
+          class="catalog-image"
+          src="assets/img/023.jpg"
+          alt="Etiqueta"
+          loading="lazy"
+          draggable="false"
+          (click)="abrirImagen('assets/img/023.jpg', 'Etiquetas')"
+        >
+
+        <div class="product-info">
+          <button
+            type="button"
+            class="view-image-button"
+            (click)="abrirImagen('assets/img/023.jpg', 'Etiquetas')"
+          >
+            Ampliar imagen
+          </button>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img
+          class="catalog-image"
+          src="assets/img/024.jpg"
+          alt="Etiqueta"
+          loading="lazy"
+          draggable="false"
+          (click)="abrirImagen('assets/img/024.jpg', 'Etiquetas')"
+        >
+
+        <div class="product-info">
+          <button
+            type="button"
+            class="view-image-button"
+            (click)="abrirImagen('assets/img/024.jpg', 'Etiquetas')"
+          >
+            Ampliar imagen
+          </button>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img
+          class="catalog-image"
+          src="assets/img/025.jpg"
+          alt="Etiqueta"
+          loading="lazy"
+          draggable="false"
+          (click)="abrirImagen('assets/img/025.jpg', 'Etiquetas')"
+        >
+
+        <div class="product-info">
+          <button
+            type="button"
+            class="view-image-button"
+            (click)="abrirImagen('assets/img/025.jpg', 'Etiquetas')"
+          >
+            Ampliar imagen
+          </button>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img
+          class="catalog-image"
+          src="assets/img/026.jpg"
+          alt="Etiqueta"
+          loading="lazy"
+          draggable="false"
+          (click)="abrirImagen('assets/img/026.jpg', 'Etiquetas')"
+        >
+
+        <div class="product-info">
+          <button
+            type="button"
+            class="view-image-button"
+            (click)="abrirImagen('assets/img/026.jpg', 'Etiquetas')"
+          >
+            Ampliar imagen
+          </button>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img
+          class="catalog-image"
+          src="assets/img/027.jpg"
+          alt="Etiqueta"
+          loading="lazy"
+          draggable="false"
+          (click)="abrirImagen('assets/img/027.jpg', 'Etiquetas')"
+        >
+
+        <div class="product-info">
+          <button
+            type="button"
+            class="view-image-button"
+            (click)="abrirImagen('assets/img/027.jpg', 'Etiquetas')"
+          >
+            Ampliar imagen
+          </button>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img
+          class="catalog-image"
+          src="assets/img/028.jpg"
+          alt="Etiqueta"
+          loading="lazy"
+          draggable="false"
+          (click)="abrirImagen('assets/img/028.jpg', 'Etiquetas')"
+        >
+
+        <div class="product-info">
+          <button
+            type="button"
+            class="view-image-button"
+            (click)="abrirImagen('assets/img/028.jpg', 'Etiquetas')"
+          >
+            Ampliar imagen
+          </button>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img
+          class="catalog-image"
+          src="assets/img/029.jpg"
+          alt="Etiqueta"
+          loading="lazy"
+          draggable="false"
+          (click)="abrirImagen('assets/img/029.jpg', 'Etiquetas')"
+        >
+
+        <div class="product-info">
+          <button
+            type="button"
+            class="view-image-button"
+            (click)="abrirImagen('assets/img/029.jpg', 'Etiquetas')"
+          >
+            Ampliar imagen
+          </button>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img
+          class="catalog-image"
+          src="assets/img/030.jpg"
+          alt="Etiqueta"
+          loading="lazy"
+          draggable="false"
+          (click)="abrirImagen('assets/img/030.jpg', 'Etiquetas')"
+        >
+
+        <div class="product-info">
+          <button
+            type="button"
+            class="view-image-button"
+            (click)="abrirImagen('assets/img/030.jpg', 'Etiquetas')"
+          >
+            Ampliar imagen
+          </button>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img
+          class="catalog-image"
+          src="assets/img/031.jpg"
+          alt="Etiqueta"
+          loading="lazy"
+          draggable="false"
+          (click)="abrirImagen('assets/img/031.jpg', 'Etiquetas')"
+        >
+
+        <div class="product-info">
+          <button
+            type="button"
+            class="view-image-button"
+            (click)="abrirImagen('assets/img/031.jpg', 'Etiquetas')"
+          >
+            Ampliar imagen
+          </button>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img
+          class="catalog-image"
+          src="assets/img/032.jpg"
+          alt="Etiqueta"
+          loading="lazy"
+          draggable="false"
+          (click)="abrirImagen('assets/img/032.jpg', 'Etiquetas')"
+        >
+
+        <div class="product-info">
+          <button
+            type="button"
+            class="view-image-button"
+            (click)="abrirImagen('assets/img/032.jpg', 'Etiquetas')"
+          >
+            Ampliar imagen
+          </button>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img
+          class="catalog-image"
+          src="assets/img/033.jpg"
+          alt="Etiqueta"
+          loading="lazy"
+          draggable="false"
+          (click)="abrirImagen('assets/img/033.jpg', 'Etiquetas')"
+        >
+
+        <div class="product-info">
+          <button
+            type="button"
+            class="view-image-button"
+            (click)="abrirImagen('assets/img/033.jpg', 'Etiquetas')"
+          >
+            Ampliar imagen
+          </button>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img
+          class="catalog-image"
+          src="assets/img/034.jpg"
+          alt="Etiqueta"
+          loading="lazy"
+          draggable="false"
+          (click)="abrirImagen('assets/img/034.jpg', 'Etiquetas')"
+        >
+
+        <div class="product-info">
+          <button
+            type="button"
+            class="view-image-button"
+            (click)="abrirImagen('assets/img/034.jpg', 'Etiquetas')"
+          >
+            Ampliar imagen
+          </button>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img
+          class="catalog-image"
+          src="assets/img/035.jpg"
+          alt="Etiqueta"
+          loading="lazy"
+          draggable="false"
+          (click)="abrirImagen('assets/img/035.jpg', 'Etiquetas')"
+        >
+
+        <div class="product-info">
+          <button
+            type="button"
+            class="view-image-button"
+            (click)="abrirImagen('assets/img/035.jpg', 'Etiquetas')"
+          >
+            Ampliar imagen
+          </button>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img
+          class="catalog-image"
+          src="assets/img/036.jpg"
+          alt="Etiqueta"
+          loading="lazy"
+          draggable="false"
+          (click)="abrirImagen('assets/img/036.jpg', 'Etiquetas')"
+        >
+
+        <div class="product-info">
+          <button
+            type="button"
+            class="view-image-button"
+            (click)="abrirImagen('assets/img/036.jpg', 'Etiquetas')"
+          >
+            Ampliar imagen
+          </button>
+        </div>
+      </article>
+
+    </div>
+
+    <p class="catalog-note">
+      ¿Buscas un diseño específico?
+      <a
+        href="#contacto"
+        (click)="irASeccion('contacto', $event)"
+      >
+        Solicita una cotización.
+      </a>
+    </p>
+  </section>
+
+  <!-- EXPERIENCIA -->
+  <section class="experience-section">
+    
+<div class="experience-number">
+  <span class="experience-prefix">Desde</span>
+  <span class="experience-year">1971</span>
+</div>
+
+
+    <div class="experience-content">
+      <span class="eyebrow">MÁS DE 50 AÑOS NOS RESPALDAN</span>
+
+      <h2>Experiencia que se imprime en cada etiqueta</h2>
+
+      <p>
+        Nuestra trayectoria nos permite ofrecer soluciones
+        para identificar productos, comunicar información
+        técnica y atender necesidades específicas de impresión.
+      </p>
+
+      <ion-button
+        class="primary-button"
+        (click)="irASeccion('contacto')"
+      >
+        Solicita tu cotización.
+        <ion-icon
+          name="arrow-forward-outline"
+          slot="end"
+        ></ion-icon>
+      </ion-button>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="contact-section">
+    <div class="contact-heading">
+      <span class="eyebrow">ESTAMOS PARA AYUDARTE</span>
+
+      <h2>Solicita tu presupuesto</h2>
+
+      <p>
+        Envíanos los detalles de tus etiquetas y prepara
+        tu solicitud de cotización.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-details">
+
+        <a
+          href="mailto:etiquetasacumuladores@gmail.com"
+          class="contact-item"
+        >
+          <ion-icon name="mail-outline"></ion-icon>
+          <div>
+            <span>Correo electrónico</span>
+            <strong>etiquetasacumuladores&#64;gmail.com</strong>
+          </div>
+        </a>
+
+        <a href="tel:+525665315536" class="contact-item">
+          <ion-icon name="call-outline"></ion-icon>
+          <div>
+            <span>Teléfono / Whatsapp</span>
+            <strong>56 65 31 55 36</strong>
+          </div>
+        </a>
+
+        <div class="contact-item">
+          <ion-icon name="location-outline"></ion-icon>
+          <div>
+            <span>Dirección</span>
+            <strong>
+              Calle Pueblo Nuevo #8, Col. Emiliano Zapata,
+              Ecatepec, Estado de México.
+            </strong>
+          </div>
+        </div>
+      </div>
+
+      <form
+        class="contact-form"
+        (submit)="enviarCotizacion($event)"
+      >
+        <ion-input
+          name="nombre"
+          label="Nombre"
+          label-placement="stacked"
+          placeholder="Escribe tu nombre"
+          autocomplete="name"
+          required
+        ></ion-input>
+
+        <ion-input
+          name="telefono"
+          type="tel"
+          label="Teléfono"
+          label-placement="stacked"
+          placeholder="Tu número de contacto"
+          autocomplete="tel"
+          required
+        ></ion-input>
+
+        <ion-input
+          name="producto"
+          label="Tipo de etiqueta"
+          label-placement="stacked"
+          placeholder="Ej. Etiquetas automotrices"
+          required
+        ></ion-input>
+
+        <ion-textarea
+          name="mensaje"
+          label="Mensaje"
+          label-placement="stacked"
+          placeholder="Medidas, cantidad, diseño y otros detalles"
+          [autoGrow]="true"
+          required
+        ></ion-textarea>
+
+        <ion-button
+          type="submit"
+          expand="block"
+          class="primary-button"
+        >
+          Solicitar por correo
+          <ion-icon name="send-outline" slot="end"></ion-icon>
+        </ion-button>
+
+        <p class="form-note">
+          Se abrirá tu aplicación de correo para enviar la solicitud.
+        </p>
+      </form>
+    </div>
+  </section>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="site-footer">
+    <img
+      src="assets/img/Logo.png"
+      alt="Logo de Etiquetas para Acumuladores"
+      draggable="false"
+    >
+
+    <p>Etiquetas para Acumuladores</p>
+    <p>Calidad y experiencia desde 1971.</p>
+
+    <span>© {{ anioActual }} Etiquetas para Acumuladores</span>
+  </footer>
+
+  <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button
+      class="whatsapp-fab"
+      (click)="contactarWhatsApp()"
+      aria-label="Contactar por WhatsApp"
+    >
+      <ion-icon name="logo-whatsapp"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <!-- MODAL DE IMAGEN AMPLIADA -->
+  <ion-modal
+    [isOpen]="isImageModalOpen"
+    cssClass="image-preview-modal"
+    [backdropDismiss]="true"
+    (didDismiss)="cerrarImagen()"
+  >
+    <ng-template>
+      <ion-header>
+        <ion-toolbar class="preview-toolbar">
+          <ion-title>{{ descripcionImagenSeleccionada }}</ion-title>
+
+          <ion-buttons slot="end">
+            <ion-button
+              (click)="cerrarImagen()"
+              aria-label="Cerrar imagen"
+            >
+              <ion-icon name="close-outline"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-content
+        class="image-preview-content"
+        (contextmenu)="bloquearMenuContextual($event)"
+      >
+        <div class="image-preview-wrap">
+          <img
+            *ngIf="imagenSeleccionada"
+            [src]="imagenSeleccionada"
+            [alt]="descripcionImagenSeleccionada"
+            draggable="false"
+            (contextmenu)="bloquearMenuContextual($event)"
+            (dragstart)="bloquearMenuContextual($event)"
+          >
+        </div>
+
+        <p class="preview-caption">
+          Vista ampliada del producto
+        </p>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
 </ion-content>
