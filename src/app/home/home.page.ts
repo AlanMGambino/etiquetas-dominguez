@@ -227,7 +227,7 @@ export class HomePage {
     );
 
     const url =
-      `mailto:etiquetasacumuladores@gmail.com` +
+      `mailto:etiquetasdominguez@gmail.com` +
       `?subject=${asunto}&body=${cuerpo}`;
 
     window.location.href = url;
